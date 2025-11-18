@@ -1,0 +1,21 @@
+{
+  "name": "daiweb-backend",
+  "version": "1.0.0",
+  "description": "Backend API for DAI Teknoloji website content management",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "migrate": "node migrations/migrate.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-session": "^1.18.2",
+    "pg": "^8.11.3"
+  }
+}
