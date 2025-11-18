@@ -91,7 +91,7 @@ export async function getContact() {
     // Varsayılan değerleri ekle
     await pool.query(
       'INSERT INTO contact (email, phone, address) VALUES ($1, $2, $3)',
-      ['info@daiteknoloji.com', '+90 (212) 123 45 67', 'İstanbul, Türkiye']
+      ['info@daiteknoloji.com', '+90 (532) 735 89 35', 'İstanbul, Türkiye']
     )
     const newResult = await pool.query('SELECT * FROM contact ORDER BY id DESC LIMIT 1')
     return newResult.rows[0]

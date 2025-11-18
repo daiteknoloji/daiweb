@@ -141,7 +141,7 @@ const defaultContent = {
   ],
   contact: {
     email: 'info@daiteknoloji.com',
-    phone: '+90 (212) 123 45 67',
+    phone: '+90 (532) 735 89 35',
     address: 'İstanbul, Türkiye'
   },
   navbar: {
