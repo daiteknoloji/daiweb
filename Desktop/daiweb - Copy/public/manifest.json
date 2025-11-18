@@ -1,0 +1,28 @@
+{
+  "name": "DAI Teknoloji - Technology Solutions",
+  "short_name": "DAI Teknoloji",
+  "description": "Modern teknolojiler ve yapay zeka destekli çözümlerle hızlı, ölçeklenebilir uygulamalar geliştiriyoruz.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1e3a8a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "technology", "productivity"],
+  "lang": "tr",
+  "dir": "ltr"
+}
+

@@ -1,0 +1,43 @@
+# robots.txt for DAI Teknoloji
+# https://daiteknoloji.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Disallow admin panel
+Disallow: /admin
+
+# Sitemap
+Sitemap: https://daiteknoloji.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Google Bot
+User-agent: Googlebot
+Allow: /
+
+# Bing Bot
+User-agent: Bingbot
+Allow: /
+
+# Facebook Bot
+User-agent: facebookexternalhit
+Allow: /
+
+# Twitter Bot
+User-agent: Twitterbot
+Allow: /
+
+# LinkedIn Bot
+User-agent: LinkedInBot
+Allow: /
+
+# Instagram Bot
+User-agent: Instagram
+Allow: /
+
+# TikTok Bot
+User-agent: TikTokBot
+Allow: /
+
