@@ -607,6 +607,15 @@ async function startServer() {
         const content = loadContentFromJSON()
         await dbHelpers.importFromJSON(content)
         console.log('✅ Veriler PostgreSQL\'e aktarıldı')
+      } else {
+        // Tablolar var, içerik kontrolü yap
+        const sectionCount = await pool.query('SELECT COUNT(*) FROM sections')
+        if (sectionCount.rows[0].count === '0') {
+          console.log('⚠️  Tablolar var ama içerik yok. JSON\'dan veri aktarılıyor...')
+          const content = loadContentFromJSON()
+          await dbHelpers.importFromJSON(content)
+          console.log('✅ Veriler PostgreSQL\'e aktarıldı')
+        }
       }
     } catch (error) {
       console.error('❌ PostgreSQL bağlantı hatası:', error.message)
