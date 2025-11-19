@@ -299,10 +299,18 @@ export async function importFromJSON(jsonData) {
     // Settings
     if (jsonData.settings) {
       if (jsonData.settings.heroVideo) {
-        await setSetting('heroVideo', jsonData.settings.heroVideo)
+        await client.query(
+          `INSERT INTO settings (key, value) VALUES ($1, $2)
+           ON CONFLICT (key) DO UPDATE SET value = $2, updated_at = CURRENT_TIMESTAMP`,
+          ['heroVideo', jsonData.settings.heroVideo]
+        )
       }
       if (jsonData.settings.logo) {
-        await setSetting('logo', jsonData.settings.logo)
+        await client.query(
+          `INSERT INTO settings (key, value) VALUES ($1, $2)
+           ON CONFLICT (key) DO UPDATE SET value = $2, updated_at = CURRENT_TIMESTAMP`,
+          ['logo', jsonData.settings.logo]
+        )
       }
     }
     
