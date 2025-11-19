@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { getContent, updateSectionTitle, updateSection, updateSectionItem, updateNavbar, updateContact, updateLogo, updateVideo, updateTranslation, updateSectionTranslation } from '../services/api'
 
-const API_BASE_URL = 'http://localhost:3001/api'
+// API Base URL - Production'da Railway backend URL'i, development'ta localhost
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api'
 
 const Admin = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false)

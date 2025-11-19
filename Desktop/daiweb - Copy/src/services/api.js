@@ -1,4 +1,5 @@
-const API_BASE_URL = 'http://localhost:3001/api'
+// API Base URL - Production'da Railway backend URL'i, development'ta localhost
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api'
 
 // Login
 export const login = async (username, password) => {
