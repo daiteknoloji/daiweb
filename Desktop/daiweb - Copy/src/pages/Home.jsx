@@ -247,26 +247,26 @@ const Home = () => {
             <div className="bg-gradient-to-br from-blue-50/30 to-white rounded-2xl border border-blue-100/50 shadow-sm p-6 md:p-8 lg:p-10 transition-all duration-300">
               <div className="prose prose-lg max-w-none text-blue-800">
                 <p className="mb-8 md:mb-10 text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed font-normal tracking-wide">
-                  {shortText}
-                </p>
-                {expandedSections[itemId] && expandedText ? (
+                {shortText}
+              </p>
+              {expandedSections[itemId] && expandedText ? (
                   <div className="space-y-8 md:space-y-10 animate-fadeIn">
                     <p className="mb-8 md:mb-10 text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed font-normal tracking-wide">
-                      {expandedText}
-                    </p>
-                  </div>
-                ) : null}
-                {shouldShowReadMore(expandedText) && (
-                  <button
-                    onClick={() => expandSection(itemId)}
+                    {expandedText}
+                  </p>
+                </div>
+              ) : null}
+              {shouldShowReadMore(expandedText) && (
+                <button
+                  onClick={() => expandSection(itemId)}
                     className="read-more-btn mt-8 md:mt-10 text-blue-600 hover:text-blue-700 font-medium text-base md:text-lg lg:text-xl flex items-center gap-3 w-full justify-center py-3 md:py-4"
-                  >
-                    <span className="relative z-10">{expandedSections[itemId] ? t.readLess : t.readMore}</span>
+                >
+                  <span className="relative z-10">{expandedSections[itemId] ? t.readLess : t.readMore}</span>
                     <svg className={`w-5 h-5 md:w-6 md:h-6 relative z-10 transition-transform duration-500 ease-in-out ${expandedSections[itemId] ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
-                )}
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+              )}
                 {/* Basit asimetrik çizgiler - sadece uygulama-fullstack için */}
                 {expandedSections[itemId] && itemId === 'uygulama-fullstack' && (
                   <div className="mt-10 md:mt-12 w-full relative overflow-hidden rounded-xl" style={{ backgroundColor: '#ffffff', minHeight: '150px' }}>
